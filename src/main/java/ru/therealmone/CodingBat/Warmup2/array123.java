@@ -1,11 +1,21 @@
-package Warmup2;
+package ru.therealmone.CodingBat.Warmup2;
+
+import ru.therealmone.CodingBat.SolutionClass;
 
 /**
  * Created by monE on 09.07.2017.
+ *
+ * Given an array of ints, return true if the sequence of numbers 1, 2, 3 appears in the array somewhere.
+ *
+ * array123([1, 1, 2, 3, 1]) → true
+ * array123([1, 1, 2, 4, 1]) → false
+ * array123([1, 1, 2, 1, 2, 3]) → true
  */
-public class array123 {
 
-    public static void main(String[] args) {
+public class array123 extends SolutionClass {
+
+    @Override
+    public void showSolution() {
         System.out.println(array123Solution(new int[] {1, 1, 2, 3, 1}));
         System.out.println(array123Solution(new int[] {1, 1, 2, 4, 1}));
         System.out.println(array123Solution(new int[] {1, 1, 2, 1, 2, 3}));
@@ -18,4 +28,5 @@ public class array123 {
         }
         return false;
     }
+
 }

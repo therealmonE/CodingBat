@@ -1,11 +1,22 @@
-package Warmup2;
+package ru.therealmone.CodingBat.Warmup2;
+
+import ru.therealmone.CodingBat.SolutionClass;
 
 /**
  * Created by monE on 09.07.2017.
+ *
+ * Given a string, return the count of the number of times that a substring length 2 appears in the string
+ * and also as the last 2 chars of the string, so "hixxxhi" yields 1 (we won't count the end substring).
+ *
+ * last2("hixxhi") → 1
+ * last2("xaxxaxaxx") → 1
+ * last2("axxxaaxx") → 2
  */
-public class last2 {
 
-    public static void main(String[] args) {
+public class last2 extends SolutionClass{
+
+    @Override
+    public void showSolution() {
         System.out.println(last2Solution("hixxhi"));
         System.out.println(last2Solution("xaxxaxaxx"));
         System.out.println(last2Solution("axxxaaxx"));

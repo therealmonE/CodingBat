@@ -1,7 +1,8 @@
 package ru.therealmone.CodingBat;
 
-import org.junit.Test;
 import ru.therealmone.CodingBat.Warmup1.*;
+import ru.therealmone.CodingBat.Warmup2.*;
+import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class CodingBatTest {
@@ -132,5 +133,49 @@ public class CodingBatTest {
         assertEquals("HeLLO", endUp.endUpSolution("Hello"));
         assertEquals("hi thERE", endUp.endUpSolution("hi there"));
         assertEquals("HI", endUp.endUpSolution("hi"));
+    }
+
+    @Test
+    public void warmup2Tests() {
+        //frontTimes
+        assertEquals("HiHi", stringTimes.stringTimesSolution("Hi",2));
+        assertEquals("HiHiHi", stringTimes.stringTimesSolution("Hi",3));
+        assertEquals("Hi", stringTimes.stringTimesSolution("Hi",1));
+        //doubleX
+        assertTrue(doubleX.doubleXSolution("axxbb"));
+        assertFalse(doubleX.doubleXSolution("axaxax"));
+        assertTrue(doubleX.doubleXSolution("xxxxx"));
+        //last2
+        assertEquals(1, last2.last2Solution("hixxhi"));
+        assertEquals(1, last2.last2Solution("xaxxaxaxx"));
+        assertEquals(2, last2.last2Solution("axxxaaxx"));
+        //array123
+        assertTrue(array123.array123Solution(new int[] {1, 1, 2, 3, 1}));
+        assertFalse(array123.array123Solution(new int[] {1, 1, 2, 4, 1}));
+        assertTrue(array123.array123Solution(new int[] {1, 1, 2, 1, 2, 3}));
+        //altPairs
+        assertEquals("kien", altPairs.altPairsSolution("kitten"));
+        assertEquals("Chole", altPairs.altPairsSolution("Chocolate"));
+        assertEquals("Congrr", altPairs.altPairsSolution("CodingHorror"));
+        //noTriples
+        assertTrue(noTriples.noTriplesSolution(new int[] {1, 1, 2, 2, 1}));
+        assertFalse(noTriples.noTriplesSolution(new int[] {1, 1, 2, 2, 2, 1}));
+        assertFalse(noTriples.noTriplesSolution(new int[] {1, 1, 1, 2, 2, 2, 1}));
+        //frontTimes
+        assertEquals("ChoCho", frontTimes.frontTimesSolution("Chocolate", 2));
+        assertEquals("ChoChoCho", frontTimes.frontTimesSolution("Chocolate", 3));
+        assertEquals("AbcAbcAbc", frontTimes.frontTimesSolution("Abc", 3));
+        //stringBits
+        assertEquals("Hlo", stringBits.stringBitsSolution("Hello"));
+        assertEquals("H", stringBits.stringBitsSolution("Hi"));
+        assertEquals("Hello", stringBits.stringBitsSolution("Heeololeo"));
+        //arrayCount9
+        assertEquals(1, arrayCount9.arrayCount9Solution(new int[] {1, 2, 9}));
+        assertEquals(2, arrayCount9.arrayCount9Solution(new int[] {1, 9, 9}));
+        assertEquals(3, arrayCount9.arrayCount9Solution(new int[] {1, 9, 9, 3, 9}));
+        //stringMatch
+        assertEquals(3, stringMatch.stringMatchSolution("xxcaazz", "xxbaaz"));
+        assertEquals(2, stringMatch.stringMatchSolution("abc", "abc"));
+        assertEquals(0, stringMatch.stringMatchSolution("abc", "axc"));
     }
 }

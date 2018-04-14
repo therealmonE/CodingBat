@@ -1,11 +1,22 @@
-package Warmup2;
+package ru.therealmone.CodingBat.Warmup2;
+
+import ru.therealmone.CodingBat.SolutionClass;
 
 /**
  * Created by monE on 09.07.2017.
+ *
+ * Given a string and a non-negative int n, we'll say that the front of the string is the first 3 chars,
+ * or whatever is there if the string is less than length 3. Return n copies of the front;
+ *
+ * frontTimes("Chocolate", 2) → "ChoCho"
+ * frontTimes("Chocolate", 3) → "ChoChoCho"
+ * frontTimes("Abc", 3) → "AbcAbcAbc"
  */
-public class frontTimes {
 
-    public static void main(String[] args) {
+public class frontTimes extends SolutionClass{
+
+    @Override
+    public void showSolution() {
         System.out.println(frontTimesSolution("Chocolate", 2));
         System.out.println(frontTimesSolution("Chocolate", 3));
         System.out.println(frontTimesSolution("Abc", 3));
