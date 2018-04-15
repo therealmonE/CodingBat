@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -11,7 +13,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * delDel("adedbc") → "adedbc"
  */
 
-public class delDel {
+public class delDel extends SolutionClass {
+    @Override
+    public void showSolution() {
+        System.out.println(delDelSolution("adelbc"));
+        System.out.println(delDelSolution("adelHello"));
+        System.out.println(delDelSolution("adedbc"));
+    }
+
     public static String delDelSolution (String str) {
             String ret;
             try{

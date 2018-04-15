@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -12,7 +14,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * notString("not bad") → "not bad"
  */
 
-public class notString {
+public class notString extends SolutionClass{
+    @Override
+    public void showSolution() {
+        System.out.println(notStringSolution("candy"));
+        System.out.println(notStringSolution("x"));
+        System.out.println(notStringSolution("not bad"));
+    }
+
     public static String notStringSolution(String str) {
         if(str.length() >= 4 && String.copyValueOf(str.toCharArray(), 0, 4).equals("not "))
             return str;

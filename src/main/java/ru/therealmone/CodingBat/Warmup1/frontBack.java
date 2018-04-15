@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -10,7 +12,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * frontBack("ab") → "ba"
  */
 
-public class frontBack {
+public class frontBack extends SolutionClass{
+    @Override
+    public void showSolution() {
+        System.out.println(frontBackSolution("code"));
+        System.out.println(frontBackSolution("a"));
+        System.out.println(frontBackSolution("ab"));
+    }
+
     public static String frontBackSolution(String str) {
         char tmp = str.length() > 1 ? str.charAt(str.length() - 1) : str.charAt(0);
         return(str.length() > 1 ?

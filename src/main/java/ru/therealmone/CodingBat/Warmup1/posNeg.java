@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -11,7 +13,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * posNeg(-4, -5, true) → true
  */
 
-public class posNeg {
+public class posNeg extends SolutionClass {
+    @Override
+    public void showSolution() {
+        System.out.println(posNegSolution(1, -1, false));
+        System.out.println(posNegSolution(-1, 1, false));
+        System.out.println(posNegSolution(-4, -5, true));
+    }
+
     public static boolean posNegSolution(int a, int b, boolean negative) {
         return((a*b < 0 && !negative) || (negative && a < 0 && b < 0));
     }

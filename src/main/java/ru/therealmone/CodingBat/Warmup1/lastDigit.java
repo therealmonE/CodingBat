@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -11,7 +13,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * lastDigit(3, 113) → true
  */
 
-public class lastDigit {
+public class lastDigit extends SolutionClass{
+    @Override
+    public void showSolution() {
+        System.out.println(lastDigitSolution(7, 17));
+        System.out.println(lastDigitSolution(6, 17));
+        System.out.println(lastDigitSolution(3, 113));
+    }
+
     public static boolean lastDigitSolution(int a, int b) {
         return(a%10 == b%10);
     }

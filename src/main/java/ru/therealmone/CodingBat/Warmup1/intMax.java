@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -10,7 +12,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * intMax(3, 2, 1) → 3
  */
 
-public class intMax {
+public class intMax extends SolutionClass {
+    @Override
+    public void showSolution() {
+        System.out.println(intMaxSolution(1, 2, 3));
+        System.out.println(intMaxSolution(1, 3, 2));
+        System.out.println(intMaxSolution(3, 2, 1));
+    }
+
     public static int intMaxSolution(int a, int b, int c) {
         return(
                 a > b ?

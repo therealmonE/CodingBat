@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -11,7 +13,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * or35(8) → false
  */
 
-public class or35 {
+public class or35 extends SolutionClass{
+    @Override
+    public void showSolution() {
+        System.out.println(or35Solution(3));
+        System.out.println(or35Solution(10));
+        System.out.println(or35Solution(8));
+    }
+
     public static boolean or35Solution (int a) {
         return (a % 3 == 0 || a % 5 == 0);
     }

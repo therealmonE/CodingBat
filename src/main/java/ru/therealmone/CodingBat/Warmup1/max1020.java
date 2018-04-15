@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -11,7 +13,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * max1020(11, 9) → 11
  */
 
-public class max1020 {
+public class max1020 extends SolutionClass {
+    @Override
+    public void showSolution() {
+        System.out.println(max1020Solution(11, 19));
+        System.out.println(max1020Solution(19, 11));
+        System.out.println(max1020Solution(11, 9));
+    }
+
     public static int max1020Solution(int a, int b) {
         return(
                 (20 - a <= 10 && a - 10 <= 10 && Math.abs(20 - b) >= 10) ||

@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -12,7 +14,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * front22("abc") → "ababcab"
  */
 
-public class front22 {
+public class front22 extends SolutionClass {
+    @Override
+    public void showSolution() {
+        System.out.println(front22Solution("kitten"));
+        System.out.println(front22Solution("Ha"));
+        System.out.println(front22Solution("abc"));
+    }
+
     public static String front22Solution(String str) {
         String tmp = "";
         try{

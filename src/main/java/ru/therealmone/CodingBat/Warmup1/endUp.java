@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -12,7 +14,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * endUp("hi") → "HI"
  */
 
-public class endUp {
+public class endUp extends SolutionClass {
+    @Override
+    public void showSolution() {
+        System.out.println(endUpSolution("Hello"));
+        System.out.println(endUpSolution("hi there"));
+        System.out.println(endUpSolution("hi"));
+    }
+
     public static String endUpSolution(String str) {
         try {
             return (String.copyValueOf(str.toCharArray(), 0, str.length() - 3) +

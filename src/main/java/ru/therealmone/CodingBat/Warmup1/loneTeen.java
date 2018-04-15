@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 06.07.2017.
  *
@@ -11,7 +13,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * loneTeen(13, 13) → false
  */
 
-public class loneTeen {
+public class loneTeen extends SolutionClass{
+    @Override
+    public void showSolution() {
+        System.out.println(loneTeenSolution(13, 99));
+        System.out.println(loneTeenSolution(21, 19));
+        System.out.println(loneTeenSolution(13, 13));
+    }
+
     public static boolean loneTeenSolution (int a, int b) {
         if (a >= 13 && a <= 19)
             return !(b >= 13 && b <= 19);

@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -12,7 +14,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * parrotTrouble(false, 6) → false
  */
 
-public class parrotTrouble {
+public class parrotTrouble extends SolutionClass {
+    @Override
+    public void showSolution() {
+        System.out.println(parrotTroubleSolution(true, 6));
+        System.out.println(parrotTroubleSolution(true, 7));
+        System.out.println(parrotTroubleSolution(false, 6));
+    }
+
     public static boolean parrotTroubleSolution(boolean talking, int hour) {
         return(talking && (hour < 7 || hour > 20));
     }

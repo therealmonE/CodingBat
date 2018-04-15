@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -12,7 +14,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * startOz("oxx") → "o"
  */
 
-public class startOz {
+public class startOz extends SolutionClass{
+    @Override
+    public void showSolution() {
+        System.out.println(startOzSolution("ozymandias"));
+        System.out.println(startOzSolution("bzoo"));
+        System.out.println(startOzSolution("oxx"));
+    }
+
     public static String startOzSolution(String str) {
         String ret = "";
         try {

@@ -1,5 +1,7 @@
 package ru.therealmone.CodingBat.Warmup1;
 
+import ru.therealmone.CodingBat.SolutionClass;
+
 /**
  * Created by monE on 13.04.2018.
  *
@@ -11,7 +13,14 @@ package ru.therealmone.CodingBat.Warmup1;
  * in3050(40, 50) → true
  */
 
-public class in3050 {
+public class in3050 extends SolutionClass{
+    @Override
+    public void showSolution() {
+        System.out.println(in3050Solution(30, 31));
+        System.out.println(in3050Solution(30, 41));
+        System.out.println(in3050Solution(40, 50));
+    }
+
     public static boolean in3050Solution(int a, int b) {
         return(
                 (40 - a <= 10 && a - 30 <= 10) && (40 - b <= 10 && b - 30 <= 10) ||
