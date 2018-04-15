@@ -177,5 +177,33 @@ public class CodingBatTest {
         assertEquals(3, stringMatch.stringMatchSolution("xxcaazz", "xxbaaz"));
         assertEquals(2, stringMatch.stringMatchSolution("abc", "abc"));
         assertEquals(0, stringMatch.stringMatchSolution("abc", "axc"));
+        //stringYak
+        assertEquals("pak", stringYak.stringYakSolution("yakpak"));
+        assertEquals("pak", stringYak.stringYakSolution("pakyak"));
+        assertEquals("123ya", stringYak.stringYakSolution("yak123ya"));
+        //has271
+        assertTrue(has271.has271Solution(new int[] {1, 2, 7, 1}));
+        assertFalse(has271.has271Solution(new int[] {1, 2, 8, 1}));
+        assertTrue(has271.has271Solution(new int[] {2, 7, 1}));
+        //countXX
+        assertEquals(1, countXX.countXXSolution("abcxx"));
+        assertEquals(2, countXX.countXXSolution("xxx"));
+        assertEquals(3, countXX.countXXSolution("xxxx"));
+        //stringSplosion
+        assertEquals("CCoCodCode", stringSplosion.stringSplosionSolution("Code"));
+        assertEquals("aababc", stringSplosion.stringSplosionSolution("abc"));
+        assertEquals("aab", stringSplosion.stringSplosionSolution("ab"));
+        //arrayFront9
+        assertTrue(arrayFront9.arrayFront9Solution(new int[] {1, 2, 9, 3, 4}));
+        assertFalse(arrayFront9.arrayFront9Solution(new int[] {1, 2, 3, 4, 9}));
+        assertFalse(arrayFront9.arrayFront9Solution(new int[] {1, 2, 3, 4, 5}));
+        //stringX
+        assertEquals("xHix", stringX.stringXSolution("xxHxix"));
+        assertEquals("abcd", stringX.stringXSolution("abxxxcd"));
+        assertEquals("xabcdx", stringX.stringXSolution("xabxxxcdx"));
+        //array667
+        assertEquals(1, array667.array667Solution(new int[] {6, 6, 2}));
+        assertEquals(1, array667.array667Solution(new int[] {6, 6, 2, 6}));
+        assertEquals(1, array667.array667Solution(new int[] {6, 7, 2, 6}));
     }
 }
