@@ -262,5 +262,37 @@ public class CodingBatTest {
         assertEquals("ell", withoutEnd.withoutEndSolution("Hello"));
         assertEquals("av", withoutEnd.withoutEndSolution("Java"));
         assertEquals("odin", withoutEnd.withoutEndSolution("Coding"));
+        //left2
+        assertEquals("lloHe", left2.left2Solution("Hello"));
+        assertEquals("vaja", left2.left2Solution("java"));
+        assertEquals("Hi", left2.left2Solution("Hi"));
+        //withoutEnd2
+        assertEquals("ell", withoutEnd2.withoutEnd2Solution("Hello"));
+        assertEquals("b", withoutEnd2.withoutEnd2Solution("abc"));
+        assertEquals("", withoutEnd2.withoutEnd2Solution("ab"));
+        //nTwice
+        assertEquals("Helo", nTwice.nTwiceSolution("Hello", 2));
+        assertEquals("Choate", nTwice.nTwiceSolution("Chocolate", 3));
+        assertEquals("Ce", nTwice.nTwiceSolution("Chocolate", 1));
+        //hasBad
+        assertTrue(hasBad.hasBadSolution("badxx"));
+        assertTrue(hasBad.hasBadSolution("xbadxx"));
+        assertFalse(hasBad.hasBadSolution("xxbadxx"));
+        //conCat
+        assertEquals("abcat", conCat.conCatSolution("abc", "cat"));
+        assertEquals("dogcat", conCat.conCatSolution("dog", "cat"));
+        assertEquals("abc", conCat.conCatSolution("abc", ""));
+        //frontAgain
+        assertTrue(frontAgain.frontAgainSolution("edited"));
+        assertFalse(frontAgain.frontAgainSolution("edit"));
+        assertTrue(frontAgain.frontAgainSolution("ed"));
+        //without2
+        assertEquals("lloHe", without2.without2Solution("HelloHe"));
+        assertEquals("HelloHi", without2.without2Solution("HelloHi"));
+        assertEquals("", without2.without2Solution("Hi"));
+        //withoutX
+        assertEquals("Hi", withoutX.withoutXSolution("xHix"));
+        assertEquals("Hi", withoutX.withoutXSolution("xHi"));
+        assertEquals("Hxi", withoutX.withoutXSolution("Hxix"));
     }
 }
