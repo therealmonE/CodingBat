@@ -294,5 +294,49 @@ public class CodingBatTest {
         assertEquals("Hi", withoutX.withoutXSolution("xHix"));
         assertEquals("Hi", withoutX.withoutXSolution("xHi"));
         assertEquals("Hxi", withoutX.withoutXSolution("Hxix"));
+        //makeTags
+        assertEquals("<i>Yay</i>", makeTags.makeTagsSolution("i", "Yay"));
+        assertEquals("<i>Hello</i>", makeTags.makeTagsSolution("i", "Hello"));
+        assertEquals("<cite>Yay</cite>", makeTags.makeTagsSolution("cite", "Yay"));
+        //firstTwo
+        assertEquals("He", firstTwo.firstTwoSolution("Hello"));
+        assertEquals("ab", firstTwo.firstTwoSolution("abcdefg"));
+        assertEquals("ab", firstTwo.firstTwoSolution("ab"));
+        //comboString
+        assertEquals("hiHellohi", comboString.comboStringSolution("Hello", "hi"));
+        assertEquals("hiHellohi", comboString.comboStringSolution("hi", "Hello"));
+        assertEquals("baaab", comboString.comboStringSolution("aaa", "b"));
+        //right2
+        assertEquals("loHel", right2.right2Solution("Hello"));
+        assertEquals("vaja", right2.right2Solution("java"));
+        assertEquals("Hi", right2.right2Solution("Hi"));
+        //middleTwo
+        assertEquals("ri", middleTwo.middleTwoSolution("string"));
+        assertEquals("od", middleTwo.middleTwoSolution("code"));
+        assertEquals("ct", middleTwo.middleTwoSolution("Practice"));
+        //twoChar
+        assertEquals("ja", twoChar.twoCharSolution("java", 0));
+        assertEquals("va", twoChar.twoCharSolution("java", 2));
+        assertEquals("ja", twoChar.twoCharSolution("java", 3));
+        //atFirst
+        assertEquals("he", atFirst.atFirstSolution("hello"));
+        assertEquals("hi", atFirst.atFirstSolution("hi"));
+        assertEquals("h@", atFirst.atFirstSolution("h"));
+        //lastTwo
+        assertEquals("codign", lastTwo.lastTwoSolution("coding"));
+        assertEquals("cta", lastTwo.lastTwoSolution("cat"));
+        assertEquals("ba", lastTwo.lastTwoSolution("ab"));
+        //minCat
+        assertEquals("loHi", minCat.minCatSolution("Hello", "Hi"));
+        assertEquals("ellojava", minCat.minCatSolution("Hello", "java"));
+        assertEquals("javaello", minCat.minCatSolution("java", "Hello"));
+        //deFront
+        assertEquals("llo", deFront.deFrontSolution("Hello"));
+        assertEquals("va", deFront.deFrontSolution("java"));
+        assertEquals("aay", deFront.deFrontSolution("away"));
+        //withoutX2
+        assertEquals("Hi", withoutX2.withoutX2Solution("xHi"));
+        assertEquals("Hi", withoutX2.withoutX2Solution("Hxi"));
+        assertEquals("Hi", withoutX2.withoutX2Solution("Hi"));
     }
 }
