@@ -2,6 +2,7 @@ package ru.therealmone.CodingBat;
 
 import ru.therealmone.CodingBat.Warmup1.*;
 import ru.therealmone.CodingBat.Warmup2.*;
+import ru.therealmone.CodingBat.String1.*;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -205,5 +206,137 @@ public class CodingBatTest {
         assertEquals(1, array667.array667Solution(new int[] {6, 6, 2}));
         assertEquals(1, array667.array667Solution(new int[] {6, 6, 2, 6}));
         assertEquals(1, array667.array667Solution(new int[] {6, 7, 2, 6}));
+    }
+
+    @Test
+    public void string1Tests() {
+        //helloName
+        assertEquals("Hello Bob!", helloName.helloNameSolution("Bob"));
+        assertEquals("Hello Alice!", helloName.helloNameSolution("Alice"));
+        assertEquals("Hello X!", helloName.helloNameSolution("X"));
+        //makeOutWord
+        assertEquals("<<Yay>>", makeOutWord.makeOutWordSolution("<<>>", "Yay"));
+        assertEquals("<<WooHoo>>", makeOutWord.makeOutWordSolution("<<>>", "WooHoo"));
+        assertEquals("[[word]]", makeOutWord.makeOutWordSolution("[[]]", "word"));
+        //firstHalf
+        assertEquals("Woo", firstHalf.firstHalfSolution("WooHoo"));
+        assertEquals("Hello", firstHalf.firstHalfSolution("HelloThere"));
+        assertEquals("abc", firstHalf.firstHalfSolution("abcdef"));
+        //nonStart
+        assertEquals("ellohere", nonStart.nonStartSolution("Hello", "There"));
+        assertEquals("avaode", nonStart.nonStartSolution("java", "code"));
+        assertEquals("hotlava", nonStart.nonStartSolution("shotl", "java"));
+        //theEnd
+        assertEquals("H", theEnd.theEndSolution("Hello", true));
+        assertEquals("o", theEnd.theEndSolution("Hello", false));
+        assertEquals("o", theEnd.theEndSolution("oh", true));
+        //endsLy
+        assertTrue(endSly.endSlySolution("oddly"));
+        assertFalse(endSly.endSlySolution("y"));
+        assertFalse(endSly.endSlySolution("oddy"));
+        //middleThree
+        assertEquals("and", middleThree.middleThreeSolution("Candy"));
+        assertEquals("and", middleThree.middleThreeSolution("and"));
+        assertEquals("lvi", middleThree.middleThreeSolution("solving"));
+        //lastChars
+        assertEquals("ls", lastChars.lastCharsSolution("last", "chars"));
+        assertEquals("ya", lastChars.lastCharsSolution("yo", "java"));
+        assertEquals("h@", lastChars.lastCharsSolution("hi", ""));
+        //extraFront
+        assertEquals("HeHeHe", extraFront.extraFrontSolution("Hello"));
+        assertEquals("ababab", extraFront.extraFrontSolution("ab"));
+        assertEquals("HHH", extraFront.extraFrontSolution("H"));
+        //startWord
+        assertEquals("hi", startWord.startWordSolution("hippo", "hi"));
+        assertEquals("hip", startWord.startWordSolution("hippo", "xip"));
+        assertEquals("h", startWord.startWordSolution("hippo", "i"));
+        //makeAbba
+        assertEquals("HiByeByeHi", makeAbba.makeAbbaSolution("Hi", "Bye"));
+        assertEquals("YoAliceAliceYo", makeAbba.makeAbbaSolution("Yo", "Alice"));
+        assertEquals("WhatUpUpWhat", makeAbba.makeAbbaSolution("What", "Up"));
+        //extraEnd
+        assertEquals("lololo", extraEnd.extraEndSolution("Hello"));
+        assertEquals("ababab", extraEnd.extraEndSolution("ab"));
+        assertEquals("HiHiHi", extraEnd.extraEndSolution("Hi"));
+        //withoutEnd
+        assertEquals("ell", withoutEnd.withoutEndSolution("Hello"));
+        assertEquals("av", withoutEnd.withoutEndSolution("Java"));
+        assertEquals("odin", withoutEnd.withoutEndSolution("Coding"));
+        //left2
+        assertEquals("lloHe", left2.left2Solution("Hello"));
+        assertEquals("vaja", left2.left2Solution("java"));
+        assertEquals("Hi", left2.left2Solution("Hi"));
+        //withoutEnd2
+        assertEquals("ell", withoutEnd2.withoutEnd2Solution("Hello"));
+        assertEquals("b", withoutEnd2.withoutEnd2Solution("abc"));
+        assertEquals("", withoutEnd2.withoutEnd2Solution("ab"));
+        //nTwice
+        assertEquals("Helo", nTwice.nTwiceSolution("Hello", 2));
+        assertEquals("Choate", nTwice.nTwiceSolution("Chocolate", 3));
+        assertEquals("Ce", nTwice.nTwiceSolution("Chocolate", 1));
+        //hasBad
+        assertTrue(hasBad.hasBadSolution("badxx"));
+        assertTrue(hasBad.hasBadSolution("xbadxx"));
+        assertFalse(hasBad.hasBadSolution("xxbadxx"));
+        //conCat
+        assertEquals("abcat", conCat.conCatSolution("abc", "cat"));
+        assertEquals("dogcat", conCat.conCatSolution("dog", "cat"));
+        assertEquals("abc", conCat.conCatSolution("abc", ""));
+        //frontAgain
+        assertTrue(frontAgain.frontAgainSolution("edited"));
+        assertFalse(frontAgain.frontAgainSolution("edit"));
+        assertTrue(frontAgain.frontAgainSolution("ed"));
+        //without2
+        assertEquals("lloHe", without2.without2Solution("HelloHe"));
+        assertEquals("HelloHi", without2.without2Solution("HelloHi"));
+        assertEquals("", without2.without2Solution("Hi"));
+        //withoutX
+        assertEquals("Hi", withoutX.withoutXSolution("xHix"));
+        assertEquals("Hi", withoutX.withoutXSolution("xHi"));
+        assertEquals("Hxi", withoutX.withoutXSolution("Hxix"));
+        //makeTags
+        assertEquals("<i>Yay</i>", makeTags.makeTagsSolution("i", "Yay"));
+        assertEquals("<i>Hello</i>", makeTags.makeTagsSolution("i", "Hello"));
+        assertEquals("<cite>Yay</cite>", makeTags.makeTagsSolution("cite", "Yay"));
+        //firstTwo
+        assertEquals("He", firstTwo.firstTwoSolution("Hello"));
+        assertEquals("ab", firstTwo.firstTwoSolution("abcdefg"));
+        assertEquals("ab", firstTwo.firstTwoSolution("ab"));
+        //comboString
+        assertEquals("hiHellohi", comboString.comboStringSolution("Hello", "hi"));
+        assertEquals("hiHellohi", comboString.comboStringSolution("hi", "Hello"));
+        assertEquals("baaab", comboString.comboStringSolution("aaa", "b"));
+        //right2
+        assertEquals("loHel", right2.right2Solution("Hello"));
+        assertEquals("vaja", right2.right2Solution("java"));
+        assertEquals("Hi", right2.right2Solution("Hi"));
+        //middleTwo
+        assertEquals("ri", middleTwo.middleTwoSolution("string"));
+        assertEquals("od", middleTwo.middleTwoSolution("code"));
+        assertEquals("ct", middleTwo.middleTwoSolution("Practice"));
+        //twoChar
+        assertEquals("ja", twoChar.twoCharSolution("java", 0));
+        assertEquals("va", twoChar.twoCharSolution("java", 2));
+        assertEquals("ja", twoChar.twoCharSolution("java", 3));
+        //atFirst
+        assertEquals("he", atFirst.atFirstSolution("hello"));
+        assertEquals("hi", atFirst.atFirstSolution("hi"));
+        assertEquals("h@", atFirst.atFirstSolution("h"));
+        //lastTwo
+        assertEquals("codign", lastTwo.lastTwoSolution("coding"));
+        assertEquals("cta", lastTwo.lastTwoSolution("cat"));
+        assertEquals("ba", lastTwo.lastTwoSolution("ab"));
+        //minCat
+        assertEquals("loHi", minCat.minCatSolution("Hello", "Hi"));
+        assertEquals("ellojava", minCat.minCatSolution("Hello", "java"));
+        assertEquals("javaello", minCat.minCatSolution("java", "Hello"));
+        //deFront
+        assertEquals("llo", deFront.deFrontSolution("Hello"));
+        assertEquals("va", deFront.deFrontSolution("java"));
+        assertEquals("aay", deFront.deFrontSolution("away"));
+        //withoutX2
+        assertEquals("Hi", withoutX2.withoutX2Solution("xHi"));
+        assertEquals("Hi", withoutX2.withoutX2Solution("Hxi"));
+        assertEquals("Hi", withoutX2.withoutX2Solution("Hi"));
     }
 }
