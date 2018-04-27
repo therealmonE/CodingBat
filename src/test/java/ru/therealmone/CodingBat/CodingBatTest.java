@@ -3,8 +3,9 @@ package ru.therealmone.CodingBat;
 import ru.therealmone.CodingBat.Warmup1.*;
 import ru.therealmone.CodingBat.Warmup2.*;
 import ru.therealmone.CodingBat.String1.*;
+import ru.therealmone.CodingBat.Logic1.*;
 import org.junit.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
 public class CodingBatTest {
 
@@ -91,9 +92,9 @@ public class CodingBatTest {
         assertFalse(in3050.in3050Solution(30, 41));
         assertTrue(in3050.in3050Solution(40, 50));
         //lastDigit
-        assertTrue(lastDigit.lastDigitSolution(7, 17));
-        assertFalse(lastDigit.lastDigitSolution(6, 17));
-        assertTrue(lastDigit.lastDigitSolution(3, 113));
+        assertTrue(ru.therealmone.CodingBat.Warmup1.lastDigit.lastDigitSolution(7, 17));
+        assertFalse(ru.therealmone.CodingBat.Warmup1.lastDigit.lastDigitSolution(6, 17));
+        assertTrue(ru.therealmone.CodingBat.Warmup1.lastDigit.lastDigitSolution(3, 113));
         //sumDouble
         assertEquals(3, sumDouble.sumDoubleSolution(1, 2));
         assertEquals(5, sumDouble.sumDoubleSolution(3, 2));
@@ -338,5 +339,89 @@ public class CodingBatTest {
         assertEquals("Hi", withoutX2.withoutX2Solution("xHi"));
         assertEquals("Hi", withoutX2.withoutX2Solution("Hxi"));
         assertEquals("Hi", withoutX2.withoutX2Solution("Hi"));
+    }
+
+    @Test
+    public void logic1Tests() {
+        //cigarParty
+        assertFalse(cigarParty.cigarPartySolution(30, false));
+        assertTrue(cigarParty.cigarPartySolution(50, false));
+        assertTrue(cigarParty.cigarPartySolution(70, true));
+        //caughtSpeeding
+        assertEquals(0, caughtSpeeding.caughtSpeedingSolution(60, false));
+        assertEquals(1, caughtSpeeding.caughtSpeedingSolution(65, false));
+        assertEquals(0, caughtSpeeding.caughtSpeedingSolution(65, true));
+        //love6
+        assertTrue(love6.love6Solution(6,4));
+        assertFalse(love6.love6Solution(4,5));
+        assertTrue(love6.love6Solution(1,5));
+        //more20
+        assertFalse(more20.more20Solution(20));
+        assertTrue(more20.more20Solution(21));
+        assertTrue(more20.more20Solution(22));
+        //nearTen
+        assertTrue(nearTen.nearTenSolution(12));
+        assertFalse(nearTen.nearTenSolution(17));
+        assertTrue(nearTen.nearTenSolution(19));
+        //teaParty
+        assertEquals(1, teaParty.teaPartySolution(6, 8));
+        assertEquals(0, teaParty.teaPartySolution(3, 8));
+        assertEquals(2, teaParty.teaPartySolution(20, 6));
+        //twoAsOne
+        assertTrue(twoAsOne.twoAsOneSokution(1, 2, 3));
+        assertTrue(twoAsOne.twoAsOneSokution(3, 1, 2));
+        assertFalse(twoAsOne.twoAsOneSokution(3, 2, 2));
+        //lastDigit
+        assertTrue(ru.therealmone.CodingBat.Logic1.lastDigit.lastDigitSolution(23, 19, 13));
+        assertFalse(ru.therealmone.CodingBat.Logic1.lastDigit.lastDigitSolution(23, 19, 12));
+        assertTrue(ru.therealmone.CodingBat.Logic1.lastDigit.lastDigitSolution(23, 19, 3));
+        //maxMod5
+        assertEquals(3, maxMod5.maxMod5Solution(2, 3));
+        assertEquals(6, maxMod5.maxMod5Solution(6, 2));
+        assertEquals(3, maxMod5.maxMod5Solution(3, 2));
+        //blueTicket
+        assertEquals(10, blueTicket.blueTicketSolution(9, 1, 0));
+        assertEquals(0, blueTicket.blueTicketSolution(9, 2 , 0));
+        assertEquals(10, blueTicket.blueTicketSolution(6, 1, 4));
+        //dateFashion
+        assertEquals(2, dateFashion.dateFashionSolution(5, 10));
+        assertEquals(0, dateFashion.dateFashionSolution(5, 2));
+        assertEquals(1, dateFashion.dateFashionSolution(5, 5));
+        //sortaSum
+        assertEquals(7, sortaSum.sortaSumSolution(3, 4));
+        assertEquals(20, sortaSum.sortaSumSolution(9, 4));
+        assertEquals(21, sortaSum.sortaSumSolution(10, 11));
+        //in1To10
+        assertTrue(in1To10.in1To10Solution(5, false));
+        assertFalse(in1To10.in1To10Solution(11, false));
+        assertTrue(in1To10.in1To10Solution(11, true));
+        //old35
+        assertTrue(old35.old35Solution(3));
+        assertTrue(old35.old35Solution(10));
+        assertFalse(old35.old35Solution(15));
+        //teenSum
+        assertEquals(7, teenSum.teenSumSolution(3, 4));
+        assertEquals(19, teenSum.teenSumSolution(10, 13));
+        assertEquals(19, teenSum.teenSumSolution(13, 2));
+        //fizzString
+        assertEquals("Fizz", fizzString.fizzStringSolution("fig"));
+        assertEquals("Buzz", fizzString.fizzStringSolution("dib"));
+        assertEquals("FizzBuzz", fizzString.fizzStringSolution("fib"));
+        //inOrder
+        assertTrue(inOrder.inOrderSolution(1, 2, 4, false));
+        assertFalse(inOrder.inOrderSolution(1, 2, 1, false));
+        assertTrue(inOrder.inOrderSolution(1, 1, 2, true));
+        //lessBy10
+        assertTrue(lessBy10.lessBy10Solution(1, 7, 11));
+        assertFalse(lessBy10.lessBy10Solution(1, 7, 10));
+        assertTrue(lessBy10.lessBy10Solution(11, 1, 7));
+        //redTicket
+        assertEquals(10, redTicket.redTicketSolution(2, 2, 2));
+        assertEquals(0, redTicket.redTicketSolution(2, 2, 1));
+        assertEquals(5, redTicket.redTicketSolution(0, 0, 0));
+        //shareDigit
+        assertTrue(shareDigit.shareDigitSolution(12, 23));
+        assertFalse(shareDigit.shareDigitSolution(12, 43));
+        assertFalse(shareDigit.shareDigitSolution(12, 44));
     }
 }
