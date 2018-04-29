@@ -423,5 +423,45 @@ public class CodingBatTest {
         assertTrue(shareDigit.shareDigitSolution(12, 23));
         assertFalse(shareDigit.shareDigitSolution(12, 43));
         assertFalse(shareDigit.shareDigitSolution(12, 44));
+        //squirrelPlay
+        assertTrue(squirrelPlay.squirrelPlaySolution(70, false));
+        assertFalse(squirrelPlay.squirrelPlaySolution(95, false));
+        assertTrue(squirrelPlay.squirrelPlaySolution(95, true));
+        //alarmClock
+        assertEquals("7:00", alarmClock.alarmClockSolution(1, false));
+        assertEquals("7:00", alarmClock.alarmClockSolution(5, false));
+        assertEquals("10:00", alarmClock.alarmClockSolution(0, false));
+        //specialEleven
+        assertTrue(specialEleven.specialElevenSolution(22));
+        assertTrue(specialEleven.specialElevenSolution(23));
+        assertFalse(specialEleven.specialElevenSolution(24));
+        //less20
+        assertTrue(less20.less20Solution(18));
+        assertTrue(less20.less20Solution(19));
+        assertFalse(less20.less20Solution(20));
+        //answerCell
+        assertTrue(answerCell.answerCellSolution(false, false, false));
+        assertFalse(answerCell.answerCellSolution(false, false, true));
+        assertFalse(answerCell.answerCellSolution(true, false, false));
+        //fizzString2
+        assertEquals("1!", fizzString2.fizzString2Solution(1));
+        assertEquals("2!", fizzString2.fizzString2Solution(2));
+        assertEquals("Fizz!", fizzString2.fizzString2Solution(3));
+        //inOrderEqual
+        assertTrue(inOrderEqual.inOrderEqualSolution(2, 5, 11, false));
+        assertFalse(inOrderEqual.inOrderEqualSolution(5, 7, 6, false));
+        assertTrue(inOrderEqual.inOrderEqualSolution(5, 5, 7, true));
+        //withoutDoubles
+        assertEquals(5, withoutDoubles.withoutDoubleSolution(2,3,true));
+        assertEquals(7, withoutDoubles.withoutDoubleSolution(3,3,true));
+        assertEquals(6, withoutDoubles.withoutDoubleSolution(3,3,false));
+        //greenTicket
+        assertEquals(0, greenTicket.greenTicketSolution(1,2,3));
+        assertEquals(20, greenTicket.greenTicketSolution(2,2,2));
+        assertEquals(10, greenTicket.greenTicketSolution(1,1,2));
+        //sumLimit
+        assertEquals(5, sumLimit.sumLimitSolution(2, 3));
+        assertEquals(8, sumLimit.sumLimitSolution(8, 3));
+        assertEquals(9, sumLimit.sumLimitSolution(8, 1));
     }
 }
