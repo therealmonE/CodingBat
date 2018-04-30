@@ -504,5 +504,25 @@ public class CodingBatTest {
         assertTrue(unlucky1.unlucky1Solution(new int[] {1, 3, 4, 5}));
         assertTrue(unlucky1.unlucky1Solution(new int[] {2, 1, 3, 4, 5}));
         assertFalse(unlucky1.unlucky1Solution(new int[] {1, 1, 1}));
+        //sameFirstLast
+        assertFalse(sameFirstLast.sameFirstLastSolution(new int[] {1, 2, 3}));
+        assertTrue(sameFirstLast.sameFirstLastSolution(new int[] {1, 2, 3, 1}));
+        assertTrue(sameFirstLast.sameFirstLastSolution(new int[] {1, 2, 1}));
+        //sum3
+        assertEquals(6, sum3.sum3Solution(new int[] {1, 2, 3}));
+        assertEquals(18, sum3.sum3Solution(new int[] {5, 11, 2}));
+        assertEquals(7, sum3.sum3Solution(new int[] {7, 0, 0}));
+        //maxEnd3
+        assertArrayEquals(new int[] {3, 3, 3}, maxEnd3.maxEnd3Solution(new int[] {1, 2, 3}));
+        assertArrayEquals(new int[] {11, 11, 11}, maxEnd3.maxEnd3Solution(new int[] {11, 5, 9}));
+        assertArrayEquals(new int[] {3, 3, 3}, maxEnd3.maxEnd3Solution(new int[] {2, 11, 3}));
+        //makeEnds
+        assertArrayEquals(new int[] {1, 3}, makeEnds.makeEndsSolution(new int[] {1, 2, 3}));
+        assertArrayEquals(new int[] {1, 4}, makeEnds.makeEndsSolution(new int[] {1, 2, 3, 4}));
+        assertArrayEquals(new int[] {7, 2}, makeEnds.makeEndsSolution(new int[] {7, 4, 6, 2}));
+        //makeLast
+        assertArrayEquals(new int[] {0, 0, 0, 0, 0, 6}, makeLast.makeLastSolution(new int[] {4, 5, 6}));
+        assertArrayEquals(new int[] {0, 0, 0, 2}, makeLast.makeLastSolution(new int[] {1, 2}));
+        assertArrayEquals(new int[] {0, 3}, makeLast.makeLastSolution(new int[] {3}));
     }
 }
