@@ -524,5 +524,55 @@ public class CodingBatTest {
         assertArrayEquals(new int[] {0, 0, 0, 0, 0, 6}, makeLast.makeLastSolution(new int[] {4, 5, 6}));
         assertArrayEquals(new int[] {0, 0, 0, 2}, makeLast.makeLastSolution(new int[] {1, 2}));
         assertArrayEquals(new int[] {0, 3}, makeLast.makeLastSolution(new int[] {3}));
+        //start1
+        assertEquals(2, start1.start1Solution(new int[] {1, 2, 3}, new int[] {1, 3}));
+        assertEquals(1, start1.start1Solution(new int[] {7, 2, 3}, new int[] {1}));
+        assertEquals(1, start1.start1Solution(new int[] {1, 2}, new int[] {}));
+        //plusTwo
+        assertArrayEquals(new int[] {1, 2, 3, 4}, plusTwo.plusTwoSolution(new int[] {1, 2}, new int[] {3, 4}));
+        assertArrayEquals(new int[] {4, 4, 2, 2}, plusTwo.plusTwoSolution(new int[] {4, 4}, new int[] {2, 2}));
+        assertArrayEquals(new int[] {9, 2, 3, 4}, plusTwo.plusTwoSolution(new int[] {9, 2}, new int[] {3, 4}));
+        //maxTriple
+        assertEquals(3, maxTriple.maxTripleSolution(new int[] {1, 2, 3}));
+        assertEquals(5, maxTriple.maxTripleSolution(new int[] {1, 5, 3}));
+        assertEquals(5, maxTriple.maxTripleSolution(new int[] {5, 2, 3}));
+        //make2
+        assertArrayEquals(new int[] {4, 5}, make2.make2Solution(new int[] {4, 5}, new int[] {1, 2, 3}));
+        assertArrayEquals(new int[] {4, 1}, make2.make2Solution(new int[] {4}, new int[] {1, 2, 3}));
+        assertArrayEquals(new int[] {1, 2}, make2.make2Solution(new int[] {}, new int[] {1, 2}));
+        //makePi
+        assertArrayEquals(new int[] {3, 1, 4}, makePi.makePiSolution());
+        //rotateLeft3
+        assertArrayEquals(new int[] {3, 2, 1}, rotateLeft3.rotateLeft3Solution(new int[] {1, 2, 3}));
+        assertArrayEquals(new int[] {11, 9, 5}, rotateLeft3.rotateLeft3Solution(new int[] {5, 9, 11}));
+        assertArrayEquals(new int[] {0, 0, 7}, rotateLeft3.rotateLeft3Solution(new int[] {7, 0, 0}));
+        //sum2
+        assertEquals(3, sum2.sum2Solution(new int[] {1, 2, 3}));
+        assertEquals(2, sum2.sum2Solution(new int[] {1, 1}));
+        assertEquals(2, sum2.sum2Solution(new int[] {1, 1, 1, 1}));
+        //has23
+        assertTrue(has23.has23Solution(new int[] {2, 5}));
+        assertTrue(has23.has23Solution(new int[] {4, 3}));
+        assertFalse(has23.has23Solution(new int[] {4, 5}));
+        //double23
+        assertTrue(double23.double23Solution(new int[] {2, 2}));
+        assertTrue(double23.double23Solution(new int[] {3, 3}));
+        assertFalse(double23.double23Solution(new int[] {2, 3}));
+        //biggerTwo
+        assertArrayEquals(new int[] {3, 4}, biggerTwo.biggerTwoSolution(new int[] {1, 2}, new int[] {3, 4}));
+        assertArrayEquals(new int[] {3, 4}, biggerTwo.biggerTwoSolution(new int[] {3, 4}, new int[] {1, 2}));
+        assertArrayEquals(new int[] {1, 2}, biggerTwo.biggerTwoSolution(new int[] {1, 1}, new int[] {1, 2}));
+        //swapEnds
+        assertArrayEquals(new int[] {4, 2, 3, 1}, swapEnds.swapEndsSolution(new int[] {1, 2, 3, 4}));
+        assertArrayEquals(new int[] {3, 2, 1}, swapEnds.swapEndsSolution(new int[] {1, 2, 3}));
+        assertArrayEquals(new int[] {5, 6, 7, 9, 8}, swapEnds.swapEndsSolution(new int[] {8, 6, 7, 9, 5}));
+        //frontPiece
+        assertArrayEquals(new int[] {1, 2}, frontPiece.frontPieceSolution(new int[] {1, 2, 3}));
+        assertArrayEquals(new int[] {1, 2}, frontPiece.frontPieceSolution(new int[] {1, 2}));
+        assertArrayEquals(new int[] {1}, frontPiece.frontPieceSolution(new int[] {1}));
+        //front11
+        assertArrayEquals(new int[] {1, 7}, front11.front11Solution(new int[] {1, 3, 3}, new int[] {7, 9, 8}));
+        assertArrayEquals(new int[] {1, 2}, front11.front11Solution(new int[] {1}, new int[] {2}));
+        assertArrayEquals(new int[] {1}, front11.front11Solution(new int[] {1, 7}, new int[] {}));
     }
 }
